@@ -1,0 +1,584 @@
+html {
+    scroll-behavior: smooth;
+}
+body { /* Ajusta el path según tu imagen de fondo */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-left h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-right ul li {
+    display: inline;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+section.inicio2 {
+    align-items: center;
+}
+
+/*colaboratorio editor */
+
+h1.colaboratorio {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+h1.colaboratorio .co {
+    color: #28a745;
+    font-weight: bold;
+}
+
+h1.colaboratorio .laboratorio {
+    color: white;
+    font-weight: normal;
+}
+
+/*fin de colaboratorio*/
+
+main {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-icons a {
+    margin: 0  10px; 
+    margin-right: 50px; 
+}
+
+.iconos{
+    width: 50px; 
+    height: 50px;
+}
+
+.txtfooter{
+    color: #ffffff;
+}
+
+/*carrusel*/
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transición suave */
+    width: calc(150% + 20px); /* Ajustar el tamaño del contenedor del carrusel */
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    width: calc(20% - 20px); /* Ajustar el tamaño de cada slide con espaciado */
+    margin-right: 30px; /* Espaciado entre imágenes */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1000px; /* Ajusta la altura según sea necesario */
+    padding: 100px 0; /* Ajusta el espacio interior */
+    color: #ffffff;
+    text-align: center;
+
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parallax2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px; /* Ajusta la altura según sea necesario */
+    padding: 0px 0px 0px 0px; /* Ajusta el espacio interior */
+    color: white;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*title*/
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    align-content: center;
+}
+
+.hero-title {
+    font-size: 8rem;
+    margin: 0;
+    font-weight: bold;
+    color: #28a745;
+    
+    
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    margin-bottom: 5rem;
+
+}
+
+.hero-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 5rem;
+}
+
+.hero-button:hover {
+    background-color: #218838;
+}
+
+/*fin de title*/
+
+/*colaboratorio editor 2 */
+
+.hero-content {
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 8rem;
+    /*margin: 0;*/
+    font-weight: bold;
+    margin-top: -300px;
+}
+
+.hero-title .co2 {
+    color: #28a745;
+    margin-top: -300px;
+}
+
+.hero-title .laboratorio2 {
+    color: #fff;
+    margin-top: -300px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    margin-bottom: 50px;
+    letter-spacing: 15px;
+}
+
+.hero-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.hero-button:hover {
+    background-color: #218838;
+}
+
+/*fin de colaboratorio 2*/
+
+
+
+/* espacios */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.espacios {
+    padding: 2rem;
+    text-align: center;
+}
+
+.espacios h1 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.espacios p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.espacios .imagenes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.espacios .imagenes img {
+    width: 45%;
+    margin-bottom: 1rem;
+}
+
+/* fin  de espacios */
+.titulo{
+    color: black;
+    font-size:50px;
+    text-align: center;
+    margin-top: 70px;    
+}
+
+.sub{
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 27%;
+    margin-right: 27%;
+    font-size: 20px;
+}
+/*sobre nosotros */
+
+#sobre-nosotros {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.parallax-nosotros {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.nosotros h2{
+    font-size: 3em;
+    color: black;
+    margin: 0;
+}
+
+.parrafo {
+    font-size: 1.25em;
+    max-width: 200px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: black;
+}
+
+
+/*  inicio de espacios edit */
+
+.container-espacios {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.espacios-header {
+    background-color: #40E0D0;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.image-item {
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* final  de espacios */
+
+
+/*espacios*/
+
+#espacios {
+    background-color: hsl(162, 57%, 67%);
+    width: 100%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    padding: 20px 0;
+}
+
+#espacios h2 {
+    font-size: 3em;
+    color: black;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#espacios p {
+    font-size: 1.25em;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+/* membresia edit inicio */
+
+.container {
+    /*max-width: 1000px;*/
+    width:94%;
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height:100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+}
+
+.benefit i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.benefit p {
+    margin: 0;
+}
+
+.icon-computer::before { content: "\1F4BB"; }
+.icon-people::before { content: "\1F465"; }
+.icon-lightbulb::before { content: "\1F4A1"; }
+.icon-wifi::before { content: "\1F4F6"; }
+.icon-phone::before { content: "\1F4DE"; }
+.icon-drink::before { content: "\1F378"; }
+  
+/* membresia final */
+
+
+/*contactanos edit */
+
+.contact-content {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: inherit; /* Ajuste aquí */
+}
+
+.contact-content h2 {
+    margin: 0;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input[type="email"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+/* contactanos fin del edit */

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLaboratorio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1 class="colaboratorio"><span class="co">Co</span><span class="laboratorio">Laboratorio</span></h1>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#comunidad">Comunidad</a></li>
+                    <li><a href="{% url 'espacios' %}">Espacios</a></li>
+                    <li><a href="#membresia">Membresía</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio2" >
+            <div class="parallax" style="background-image: url('{% static 'images/inicio.jpg' %}')">
+                <div class="hero-content">
+                    <h2 class="hero-title"><span class="co2">Co</span><span class="laboratorio2">Laboratorio</span></h2>
+                    <p class="hero-subtitle">EN UN ENTORNO INNOVADOR</p>
+                    <a href="#espacios" class="hero-button">RESERVA UN ESPACIO</a>
+                </div>    
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+           <div clas="parallax-nosotros"> 
+                <div class="parallax" color="black" flex-direction="colum" padding="20px" style="background-image: url('{% static 'images/nosotros.jpg' %}')">
+                    <div class="content">
+                        <h2 class="titulo" color="black">Sobre Nosotros</h2>
+                        <p class="sub">En CoLaboratorio, comprendemos los desafíos de gestionar espacios de coworking de manera eficiente. Por eso, hemos desarrollado una plataforma integral que simplifica la reserva de escritorios y salas de reuniones, ofreciendo opciones de pago electrónico y tarifas flexibles adaptadas a las necesidades de cada usuario. Nos comprometemos a mejorar la accesibilidad y la conveniencia de nuestros espacios, para que nuestros clientes puedan concentrarse en lo más importante: su trabajo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidad">
+            <div >
+                <h1 class="titulo">NUESTRA COMUNIDAD</h1>
+                <p class="sub">Nuestra comunidad es clave. Conectamos profesionales, fomentando la colaboración y el crecimiento conjunto.</p>
+            </div>
+        </section>
+        <section id="carousel-section" >
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide">
+                        <img src="{% static 'images/comunidad1.jpg' %}" alt="First slide">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'images/comunidad2.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'images/comunidad3.jpg' %}" alt="Third slide">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'images/comunidad4.jpg' %}" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="{% static 'images/comunidad5.jpg' %}" alt="Fifth slide">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>   
+            <div class="container-espacios">
+                <header class="espacios-header">
+                    <h1>ESPACIOS</h1>
+                    <p>Encuentra escritorios y salas de reuniones disponibles, y paga de manera electrónica. Simplificamos tu reserva para que puedas concentrarte en lo que realmente importa: tu trabajo.</p>
+                </header>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="{% static 'images/espacios1.jpg' %}" alt="Sala de reuniones">
+                    </div>
+                    <div class="image-item">
+                        <img src="{% static 'images/espacios2.jpg' %}" alt="Personas en networking">
+                    </div>
+                    <div class="image-item">
+                        <img src="{% static 'images/espacios3.jpg' %}" alt="Espacio de trabajo creativo">
+                    </div>
+                    <div class="image-item">
+                        <img src="{% static 'images/espacios4.jpg' %}" alt="Espacio de coworking">
+                    </div>
+                </div>
+            </div>
+        </section>            
+
+        <section id="membresia">
+            <div class="container">
+                <h1>MEMBRESÌA</h1>
+                <p class="subtitle">¡Hazte miembro!</p>
+                
+                <div class="benefits">
+                    <div class="benefit">
+                        <i class="icon-computer"></i>
+                        <p>Un escritorio impresionante</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="icon-people"></i>
+                        <p>x5 Horas Gratis para la Salas de Reuniones</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="icon-lightbulb"></i>
+                        <p>Acceso a una impresionante comunidad de personas innovadoras</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="icon-wifi"></i>
+                        <p>Velocidad de Internet de 2 GB</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="icon-phone"></i>
+                        <p>Llamadas ilimitadas al extranjero</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="icon-drink"></i>
+                        <p>Disponibilidad de variedad de bebidas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactanos">
+            <div class="parallax2" style="background-image: url('{% static 'images/comunidad3.jpg' %}')">
+                <div class="contact-content">
+                    <h2>CONTACTANOS</h2>
+                    <p>DIRECCIÓN: 500 TERRY FRANCO CALLE SAN FRANSISCO, CA 04000</p>
+                    <p>TELÉFONO: +900158364 | colaboratory@hotmail.com</p>
+                    <p>Suscríbete para recibir actualizaciones y promociones</p>
+                    <form class="contact-form">
+                        <input type="email" placeholder="Introduzca su correo electrónico aquí" required>
+                        <button type="submit">Obtener Actualizaciones</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4551.119717108712!2d-71.549052489875!3d-16.423797642086384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b25fcd7185f%3A0x9c731b5d0f825953!2sMall%20paseo%20central!5e0!3m2!1ses-419!2spe!4v1720665598071!5m2!1ses-419!2spe" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <!-- Agrega más secciones según necesites -->
+
+    </main>
+
+    <footer>
+        <p class="txtfooter">© 2024 por CoLaboratorio. Desarrollado by equipo dinamita</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img class="iconos" src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img class="iconos" src="{% static 'images/twiter.png' %}" alt="Twitter"></a>
+            <a href="https://www.instagram.com"><img class="iconos" src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+    
+        function showSlide(index) {
+            const carousel = document.querySelector('.carousel');
+            
+            // Ensure the index is within bounds
+            if (index >= totalSlides) {
+                index = 0;
+            } else if (index < 0) {
+                index = totalSlides - 1;
+            }
+            
+            currentSlide = index;
+            carousel.style.transform = `translateX(${-100 * currentSlide / totalSlides}%)`;
+        }
+    
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(nextSlide, 2500); // Cambia de imagen cada 2.5 segundos (2500 ms)
+        });
+    </script>    
+</body>
+</html>

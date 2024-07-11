@@ -1,0 +1,78 @@
+<!-- main/templates/main/payment.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar por {{ product.name }}</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1 class="colaboratorio"><span class="co">Co</span><span class="laboratorio">Laboratorio</span></h1>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#comunidad">Comunidad</a></li>
+                    <li><a href="{% url 'espacios' %}">Espacios</a></li>
+                    <li><a href="#membresia">Membresía</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Pagar por {{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+        <p class="price">S/ {{ product.price }}</p>
+        <button id="checkout-button">Pagar ahora</button>
+    </main>
+
+    <footer>
+        <p class="txtfooter">© 2024 por CoLaboratorio. Desarrollado by equipo dinamita</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img class="iconos" src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img class="iconos" src="{% static 'images/twitter.png' %}" alt="Twitter"></a>
+            <a href="https://www.instagram.com"><img class="iconos" src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        var stripe = Stripe('{{ stripe_publishable_key }}');
+
+        var checkoutButton = document.getElementById('checkout-button');
+
+        checkoutButton.addEventListener('click', function () {
+            fetch("{% url 'create_checkout_session' product.id %}", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}',
+                },
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (sessionId) {
+                return stripe.redirectToCheckout({ sessionId: sessionId.id });
+            })
+            .then(function (result) {
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            })
+            .catch(function (error) {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>

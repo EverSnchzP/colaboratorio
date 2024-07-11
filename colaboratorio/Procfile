@@ -1,0 +1,1 @@
+web: gunicorn colaboratorio.wsgi --log-file -
